@@ -1,17 +1,51 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDom from 'react-dom'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// Always return JSX, you always need to return something! even if it's just an empty <div>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// JSX Rules
+// return single Element
+// div / section / article or Fragment ex. <>, <React.Fragment>
+// use camelCase for html attribute
+// className instead of class
+// close every Element
+// formatting
+
+function BookList() {
+  return (
+    <section>
+      <Book />
+    </section>
+  )
+}
+
+const Book = () => {
+  return (
+    <article>
+      <Image></Image>
+      <Title></Title>
+      <Author></Author>
+    </article>
+  )
+}
+
+const Image = () => (
+  <img
+    src='https://images-na.ssl-images-amazon.com/images/I/61HtUDSnCoL._AC_UL200_SR200,200_.jpg'
+    alt=''
+  />
+)
+
+const Title = () => {
+  return (
+ <h1>Dee's Big Nuts</h1>
+  )}
+
+  const Author =() => {
+    return (
+      <h4>Mark Thunder</h4>
+    )
+  }
+
+
+ReactDom.render(<BookList />, document.getElementById('root'))
