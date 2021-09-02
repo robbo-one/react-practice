@@ -21,7 +21,7 @@ function BookList() {
     </section>
   )
 }
-
+const author = "Mark Thunder"
 const Book = () => {
   const title = "Dee's Big Nuts"
   return (
@@ -31,7 +31,7 @@ const Book = () => {
         alt=''
       />
       <h1>{title}</h1>
-      <h4>Mark Thunder</h4>
+      <h4>{author}</h4>
     </article>
   )
 }
