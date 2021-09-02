@@ -18,18 +18,13 @@ function BookList() {
   return (
     <section className='booklist'>
       <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
     </section>
   )
 }
 
 const Book = () => {
   return (
-    <article className="book">
+    <article className='book'>
       <Image></Image>
       <Title></Title>
       <Author></Author>
@@ -49,7 +44,12 @@ const Title = () => {
 }
 
 const Author = () => {
-  return <h4>Mark Thunder</h4>
+  return (
+    <h4  // example of inline styling ( it will override the css coming from the imported CSS file.
+    style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem' }}>
+      Mark Thunder
+    </h4>
+  )
 }
 
 ReactDom.render(<BookList />, document.getElementById('root'))
