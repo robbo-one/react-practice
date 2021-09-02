@@ -31,7 +31,10 @@ const Book = () => {
         alt=''
       />
       <h1>{title}</h1>
-      <h4>{author}</h4>
+      <h4>{author.toUpperCase()}</h4>
+      {/* <p>{let x = 6}</p> */} 
+      {/* we cannot have a statement here, however if we have an expression everything will work as shown below */}
+      <p>{6 + 6}</p>
     </article>
   )
 }
