@@ -44,7 +44,12 @@ function BookList() {
   )
 }
 const Book = ({ img, title, author }) => {
+  // Above is destructuring props inside the function parameters.
+
+  // Below example is destructuring props inside the function, they both do the same thing.
+
   // const {img, title, author} = props
+
   return (
     <article className='book'>
       <img src={img} alt='book' />
