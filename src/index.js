@@ -25,31 +25,23 @@ function BookList() {
 const Book = () => {
   return (
     <article className='book'>
-      <Image></Image>
-      <Title></Title>
-      <Author></Author>
-    </article>
-  )
-}
-
-const Image = () => (
-  <img
+       <img
     src='https://images-na.ssl-images-amazon.com/images/I/61HtUDSnCoL._AC_UL200_SR200,200_.jpg'
     alt=''
   />
-)
-
-const Title = () => {
-  return <h1>Dee's Big Nuts</h1>
-}
-
-const Author = () => {
-  return (
-    <h4  // example of inline styling ( it will override the css coming from the imported CSS file.
-    style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem' }}>
-      Mark Thunder
-    </h4>
+  <h1>Dee's Big Nuts</h1>
+  <h4>Mark Thunder</h4>
+    </article>  
   )
 }
+
+
+//const Author = () => {
+  //return (
+  //  <h4   example of inline styling ( it will override the css coming from the imported CSS file.
+   // style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem' }}
+  // ></h4>
+  //)
+//}
 
 ReactDom.render(<BookList />, document.getElementById('root'))
