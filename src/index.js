@@ -34,7 +34,11 @@ function BookList() {
         img={firstBook.img}
         title={firstBook.title}
         author={firstBook.author}
-      />{' '}
+      >
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis ut dicta sint mollitia aliquid. Aut ea repellat recusandae itaque.
+      </p>
+      </Book>
       <Book
         img={secondBook.img}
         title={secondBook.title}
@@ -43,18 +47,20 @@ function BookList() {
     </section>
   )
 }
-const Book = ({ img, title, author }) => {
+const Book = (props) => {
   // Above is destructuring props inside the function parameters.
 
   // Below example is destructuring props inside the function, they both do the same thing.
 
-  // const {img, title, author} = props
+  const {img, title, author} = props
+  console.log(props)
 
   return (
     <article className='book'>
       <img src={img} alt='book' />
       <h1>{title}</h1>
       <h4>{author}</h4>
+      {props.children}
     </article>
   )
 }
