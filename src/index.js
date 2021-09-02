@@ -1,6 +1,9 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 
+//CSS
+import './index.css'
+
 // Always return JSX, you always need to return something! even if it's just an empty <div>
 
 // JSX Rules
@@ -13,7 +16,12 @@ import ReactDom from 'react-dom'
 
 function BookList() {
   return (
-    <section>
+    <section className='booklist'>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
       <Book />
     </section>
   )
@@ -37,15 +45,11 @@ const Image = () => (
 )
 
 const Title = () => {
-  return (
- <h1>Dee's Big Nuts</h1>
-  )}
+  return <h1>Dee's Big Nuts</h1>
+}
 
-  const Author =() => {
-    return (
-      <h4>Mark Thunder</h4>
-    )
-  }
-
+const Author = () => {
+  return <h4>Mark Thunder</h4>
+}
 
 ReactDom.render(<BookList />, document.getElementById('root'))
