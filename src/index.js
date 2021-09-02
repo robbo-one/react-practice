@@ -23,25 +23,25 @@ function BookList() {
 }
 
 const Book = () => {
+  const title = "Dee's Big Nuts"
   return (
     <article className='book'>
-       <img
-    src='https://images-na.ssl-images-amazon.com/images/I/61HtUDSnCoL._AC_UL200_SR200,200_.jpg'
-    alt=''
-  />
-  <h1>Dee's Big Nuts</h1>
-  <h4>Mark Thunder</h4>
-    </article>  
+      <img
+        src='https://images-na.ssl-images-amazon.com/images/I/61HtUDSnCoL._AC_UL200_SR200,200_.jpg'
+        alt=''
+      />
+      <h1>{title}</h1>
+      <h4>Mark Thunder</h4>
+    </article>
   )
 }
 
-
 //const Author = () => {
-  //return (
-  //  <h4   example of inline styling ( it will override the css coming from the imported CSS file.
-   // style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem' }}
-  // ></h4>
-  //)
+//return (
+//  <h4   example of inline styling ( it will override the css coming from the imported CSS file.
+// style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem' }}
+// ></h4>
+//)
 //}
 
 ReactDom.render(<BookList />, document.getElementById('root'))
