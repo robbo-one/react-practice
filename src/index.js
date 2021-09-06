@@ -16,21 +16,21 @@ import './index.css'
 //setup vars =
 const books = [
   {
-    id:1,
+    id: 1,
     img: 'https://images-na.ssl-images-amazon.com/images/I/61HtUDSnCoL._AC_UL200_SR200,200_.jpg',
     title: "Dee's Big Nuts",
     author: 'Mark Thunder',
   },
 
   {
-    id:2,
+    id: 2,
 
     img: 'https://images-na.ssl-images-amazon.com/images/I/81eB%2B7%2BCkUL._AC_UL200_SR200,200_.jpg',
     title: 'I Love You to the Moon and Back',
     author: 'Amelia Hepworth',
   },
   {
-    id:3,
+    id: 3,
 
     img: 'https://images-na.ssl-images-amazon.com/images/I/91ig3dTSFgL._AC_UL200_SR200,200_.jpg',
     title: 'Go the F**k to Sleep',
@@ -41,20 +41,21 @@ function BookList() {
   return (
     <section className='booklist'>
       {books.map((book) => {
-        return <Book key={book.id} book={book}> </Book>
+        return (
+          <Book key={book.id} {...book}>
+            {' '}
+          </Book>
+        )
       })}
-
     </section>
   )
 }
 const Book = (props) => {
-
   // Above is destructuring props inside the function parameters.
 
   // Below example is destructuring props inside the function, they both do the same thing.
 
-  const { img, title, author } = props.book
- 
+  const { img, title, author } = props
 
   return (
     <article className='book'>
