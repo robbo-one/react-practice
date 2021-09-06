@@ -26,6 +26,11 @@ const books = [
     title: 'I Love You to the Moon and Back',
     author: 'Amelia Hepworth',
   },
+  {
+    img: 'https://images-na.ssl-images-amazon.com/images/I/91ig3dTSFgL._AC_UL200_SR200,200_.jpg',
+    title: 'Go the F**k to Sleep',
+    author: 'Adam Mansbach and Ricardo Cortés',
+  },
 ]
 function BookList() {
   return (
