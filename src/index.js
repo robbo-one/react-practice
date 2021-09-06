@@ -7,36 +7,13 @@
 // className instead of class
 // close every Element
 // formattingimport React from 'react'
-
+import React from 'react'
 import ReactDom from 'react-dom'
+import { books } from './books'
 
 //CSS
 import './index.css'
 
-//setup vars =
-const books = [
-  {
-    id: 1,
-    img: 'https://images-na.ssl-images-amazon.com/images/I/61HtUDSnCoL._AC_UL200_SR200,200_.jpg',
-    title: "Dee's Big Nuts",
-    author: 'Mark Thunder',
-  },
-
-  {
-    id: 2,
-
-    img: 'https://images-na.ssl-images-amazon.com/images/I/81eB%2B7%2BCkUL._AC_UL200_SR200,200_.jpg',
-    title: 'I Love You to the Moon and Back',
-    author: 'Amelia Hepworth',
-  },
-  {
-    id: 3,
-
-    img: 'https://images-na.ssl-images-amazon.com/images/I/91ig3dTSFgL._AC_UL200_SR200,200_.jpg',
-    title: 'Go the F**k to Sleep',
-    author: 'Adam Mansbach and Ricardo Cortés',
-  },
-]
 function BookList() {
   return (
     <section className='booklist'>
@@ -54,14 +31,17 @@ const Book = ({ img, title, author }) => {
   // attribute, eventHandler
   // onClick, onMouseOver
   const clickHandler = (e) => {
-    console.log(e) 
+    console.log(e)
     console.log(e.target)
     alert('hello world')
   }
   return (
-    <article className='book' onMouseOver={()=>{
-      console.log(title)
-    }}>
+    <article
+      className='book'
+      onMouseOver={() => {
+        console.log(title)
+      }}
+    >
       <img src={img} alt='book' />
       <h1>{title}</h1>
       <h4>{author}</h4>
