@@ -13,37 +13,38 @@ import ReactDom from 'react-dom'
 //CSS
 import './index.css'
 
-//setup vars = 
+//setup vars =
 const books = [
-{
-  img: 'https://images-na.ssl-images-amazon.com/images/I/61HtUDSnCoL._AC_UL200_SR200,200_.jpg',
-  title: "Dee's Big Nuts",
-  author: 'Mark Thunder',
-},
+  {
+    img: 'https://images-na.ssl-images-amazon.com/images/I/61HtUDSnCoL._AC_UL200_SR200,200_.jpg',
+    title: "Dee's Big Nuts",
+    author: 'Mark Thunder',
+  },
 
-{
-  img: 'https://images-na.ssl-images-amazon.com/images/I/81eB%2B7%2BCkUL._AC_UL200_SR200,200_.jpg',
-  title: 'I Love You to the Moon and Back',
-  author: 'Amelia Hepworth',
-}
+  {
+    img: 'https://images-na.ssl-images-amazon.com/images/I/81eB%2B7%2BCkUL._AC_UL200_SR200,200_.jpg',
+    title: 'I Love You to the Moon and Back',
+    author: 'Amelia Hepworth',
+  },
 ]
-
-const names =  ['john', 'peter', 'susan']
-const  newNames = names.map((name) => {
-  return <h1>{name}</h1>
-})
-console.log(newNames)
 function BookList() {
   return (
-    <section className='booklist'>{newNames}</section>
+    <section className='booklist'>
+      {books.map((book) => {
+        const { img, title, author } = book
+        return <Book book={book}> </Book>
+      })}
+
+    </section>
   )
 }
 const Book = (props) => {
+  console.log(props)
   // Above is destructuring props inside the function parameters.
 
   // Below example is destructuring props inside the function, they both do the same thing.
 
-  const {img, title, author} = props
+  const { img, title, author } = props.book
   console.log(props)
 
   return (
@@ -51,18 +52,15 @@ const Book = (props) => {
       <img src={img} alt='book' />
       <h1>{title}</h1>
       <h4>{author}</h4>
-     
     </article>
   )
 }
 
+//  <p>{let x = 6}</p>
 
-//  <p>{let x = 6}</p> 
+//  we cannot have a statement here, however if we have an expression everything will work as shown below
 
-//  we cannot have a statement here, however if we have an expression everything will work as shown below 
-
-//   <p>{6 + 6}</p> 
-
+//   <p>{6 + 6}</p>
 
 //const Author = () => {
 //return (
