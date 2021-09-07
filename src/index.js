@@ -11,11 +11,13 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import { books } from './books'
 import SpecificBook from './Book'
-
+import {greeting} from './testing/testing'
+//test 
 //CSS
 import './index.css'
 
 function BookList() {
+  console.log(greeting)
   return (
     <section className='booklist'>
       {books.map((book) => {
