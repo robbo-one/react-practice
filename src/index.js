@@ -11,12 +11,12 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import { books } from './books'
 import SpecificBook from './Book'
-import {greeting} from './testing/testing'
-//testinggggg 
+import { greeting } from './testing/testing'
+
 //CSS
 import './index.css'
 
-function BookList() {
+function BookList() { 
   console.log(greeting)
   return (
     <section className='booklist'>
@@ -46,3 +46,4 @@ function BookList() {
 //}
 
 ReactDom.render(<BookList />, document.getElementById('root'))
+ 

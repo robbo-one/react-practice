@@ -1,3 +1,4 @@
+//type rafce to get boiler
 import React from 'react'
 
 const Book = ({ img, title, author }) => {
@@ -7,6 +8,9 @@ const Book = ({ img, title, author }) => {
     console.log(e)
     console.log(e.target)
     alert('hello world')
+  }
+  const complexExample = (author) => {
+    console.log(author)
   }
   return (
     <article
@@ -21,11 +25,11 @@ const Book = ({ img, title, author }) => {
       <button type='button' onClick={clickHandler}>
         reference example
       </button>
+      <button type='button' onClick={() => complexExample(author)}>
+        more complex example
+      </button>
     </article>
   )
 }
 
 export default Book
-
-
-//type rafce to get boiler
